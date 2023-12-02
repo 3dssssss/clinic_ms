@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #800000;
+}
+
+.sidebar .logo{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.logo_name{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sidebar .nav-links{
+    background: #890F0D;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+    background: #9A4444;
+}
+
+.sidebar .nav-links li i{
+    height: 55px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.sidebar .nav-links li a, .sidebar .nav-links  .log_out a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name{
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.sidebar .nav-links  .log_out{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*search bar*/
+.main{
+    background: #f5f5f5;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 260px);
+    left: 260px;
+}
+
+.main nav{
+    height: 90%;
+    background: #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main nav .side{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    
+}
+
+.main nav .side .patients, .main nav .side i{
+    font-size: 40px;
+    margin-right: 2px;
+}
+
+.main nav .search-box{
+    height: 50px;
+    width: 550px;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav .search-box input{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 17px;
+    background: #F5F6FA;
+    border: 2px solid #EFEEF1;
+    outline: none;
+}
+
+nav .search-box .bx-search{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background: #890F0D;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*add patients*/
+.box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.box2 .btn_form{
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    background:rgb(22, 77, 179);
+    padding: 15px 20px;
+    width: max-content;
+    height: 65px;
+    margin: 30px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.box2 .btn_form i{
+    color: #ffffff;
+    font-size: 17px;
+    margin: 2px;
+}
+
+.box2 .btn_scan a{
+    text-decoration: none;
+    color: #fff;
+}
+/*form for patients*/
+.form_popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: fit-content;
+    height: 540px;
+    align-items: center;
+    display: none;
+}
+.form-container{
+    width: 500px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 0 auto;
+    align-items: center;
+    background: #B6BBC4;
+    backdrop-filter: blur(5px);
+}
+
+.input-box{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    position: relative;
+}
+
+input{
+    height: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 7px;
+    margin: 5px 0 ;
+    outline: none;
+}
+
+.form-container .btnSubmit{
+    background-color: #0d8928;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    width: 480px;
+    border-style: none;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.form-container .btnClear{
+    background-color: #9A4444;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    width: 480px;
+    border-style: none;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+.form-container .btncancel{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 24px;
+    opacity: 0.7;
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+}
+
+.form-container .buttons{
+    display: flex;
+    flex-direction: row;
+}
